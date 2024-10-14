@@ -10,6 +10,7 @@ public static void main(String[] args) {
         System.out.println("Servidor aguardando conexões...");
 
         while (true) {
+            //conexão com a api estabelecida
             try (Socket clientSocket = serverSocket.accept()) {
                 System.out.println("Conexão aceita: " + clientSocket.getInetAddress());
 
@@ -19,7 +20,7 @@ public static void main(String[] args) {
                 Gson gson = new Gson();
                 User user = gson.fromJson(jsonInput, User.class);
 
-                // Validar os dados do usuário
+                // valida os dados do usuário
                 String validationMessage = User.validateUser(user);
                 String responseMessage;
 
@@ -29,7 +30,7 @@ public static void main(String[] args) {
                     responseMessage = "{\"status\":\"error\", \"message\":\"" + validationMessage + "\"}";
                 }
 
-                // Enviar a resposta de volta para o cliente
+                //envia resposta de volta para o cliente
                 OutputStream out = clientSocket.getOutputStream();
                 out.write(responseMessage.getBytes());
                 out.flush();

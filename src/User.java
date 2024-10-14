@@ -17,7 +17,6 @@ public class User {
 
     protected static String validateUser(User user) {
 
-        // Verifica se há campos vazios
         if (user.name == null || user.email == null || user.password == null || user.confirmedPassword == null || user.cpf == null || user.birth == null || user.phone == null) {
             return "Campos obrigatórios estão vazios.";
         }
@@ -91,12 +90,11 @@ public class User {
 
 
     private static boolean cpfExist(String cpf) {
-        // Verifica se o CPF tem exatamente 11 dígitos
         if (cpf.length() != 11) {
             return false;
         }
 
-        // Validação do primeiro dígito verificador
+        //primeiro dígito verificador
         int sum = 0;
         for (int i = 0; i < 9; i++) {
             sum += Character.getNumericValue(cpf.charAt(i)) * (10 - i);
@@ -108,7 +106,7 @@ public class User {
             return false;
         }
 
-        // Validação do segundo dígito verificador
+        //segundo dígito verificador
         sum = 0;
         for (int i = 0; i < 10; i++) {
             sum += Character.getNumericValue(cpf.charAt(i)) * (11 - i);
@@ -120,37 +118,31 @@ public class User {
     }
 
     private static boolean isValidBirthDate(String birthDateString) {
-        // Define o formato da data
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         try {
-            // Tenta fazer o parse da data de nascimento
             LocalDate birthDate = LocalDate.parse(birthDateString, dateFormatter);
 
-            // Verifica se o mês está entre 1 e 12
             int month = birthDate.get(ChronoField.MONTH_OF_YEAR);
             if (month < 1 || month > 12) {
                 return false;
             }
 
-            // Verifica se o ano está entre 1900 e o ano atual
             int year = birthDate.get(ChronoField.YEAR);
             int currentYear = LocalDate.now().get(ChronoField.YEAR);
             if (year < 1900 || year > currentYear) {
                 return false;
             }
 
-            // Verifica se o dia é válido para o mês
             int dayOfMonth = birthDate.get(ChronoField.DAY_OF_MONTH);
-            int maxDayOfMonth = birthDate.getMonth().length(birthDate.isLeapYear());  // Lida com anos bissextos
+            int maxDayOfMonth = birthDate.getMonth().length(birthDate.isLeapYear());
             if (dayOfMonth < 1 || dayOfMonth > maxDayOfMonth) {
                 return false;
             }
 
-            return true; // Data é válida
+            return true;
 
         } catch (DateTimeParseException e) {
-            // Se a data não puder ser parseada, não é válida
             return false;
         }
     }
