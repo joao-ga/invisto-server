@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="393630d4-69cf-425f-9719-c54b12c45955" name="Changes" comment="Primeiro commit">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mongodb_driver_sync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invisto_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/invisto_server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -50,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -90,6 +90,12 @@
       <workItem from="1727876569241" duration="1645000" />
       <workItem from="1728348660165" duration="181000" />
       <workItem from="1728472882869" duration="5160000" />
+      <workItem from="1728490325028" duration="141000" />
+      <workItem from="1728558930716" duration="4864000" />
+      <workItem from="1728574959823" duration="629000" />
+      <workItem from="1728651129967" duration="1373000" />
+      <workItem from="1728831896109" duration="4329000" />
+      <workItem from="1728908886920" duration="2808000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro commit">
       <option name="closed" value="true" />
