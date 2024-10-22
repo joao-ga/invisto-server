@@ -36,7 +36,7 @@ public class User {
             return "A senha deve conter pelo menos uma letra maiúscula e um caractere especial.";
         }
 
-        String namePattern = "^(?!.*\\d)([A-Z][a-z]+(?: [A-Z][a-z]+)*)$";
+        String namePattern = "^(?!.*\\d)([A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]*(?: [A-ZÁÉÍÓÚÂÊÔÃÕÇ][a-záéíóúâêôãõç]*)*)$";
         if (user.name.length() > 50) {
             return "O nome deve ter no máximo 50 caracteres.";
         }
