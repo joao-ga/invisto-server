@@ -5,15 +5,15 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 public class ClientRequestProcessor {
-    private Socket clientSocket;
+    private final Socket CLIENT_SOCKET;
 
     public ClientRequestProcessor(Socket clientSocket) {
-        this.clientSocket = clientSocket;
+        this.CLIENT_SOCKET = clientSocket;
     }
 
     public void processRequest() {
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-             OutputStream out = clientSocket.getOutputStream()) {
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(CLIENT_SOCKET.getInputStream()));
+             OutputStream out = CLIENT_SOCKET.getOutputStream()) {
 
             // Recebe o JSON do cliente
             String jsonInput = in.readLine();

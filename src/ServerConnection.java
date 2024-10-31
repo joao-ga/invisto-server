@@ -2,14 +2,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerConnection {
-    private int port;
+    private final int PORT;
 
     public ServerConnection(int port) {
-        this.port = port;
+        this.PORT = port;
     }
 
     public void start() {
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             System.out.println("Servidor aguardando conexões...");
 
             while (true) {
